@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background-image: url('src/img/Backgroud-1.png');
+            font-family: "Lucida Sans", sans-serif;
+            background-repeat: no-repeat;
+        }
+
+
+        body {
+            height: 90%;
+            width: 100%;
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        body .fundo {
+            background-image: image();
+            width: 100%;
+            height: 100%;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .header {
+            color: #ffffff;
+        }
+
+        .nomes {
+            width: 100%;
+
+            padding-left: 17%;
+            padding-right: 17%;
+
+            border: 0;
+            margin: 0;
+        }
+
+        .floral {
+            width: 100%;
+            border: 0;
+            margin: 0;
+        }
+
+        .florCentro {
+            width: 100%;
+            padding-left: 30%;
+            padding-right: 30%;
+            padding-bottom: 1.0rem;
+            border: 0;
+            margin: 0;
+        }
+
+        .fraseConvidados {
+            width: 100%;
+
+            padding-left: 17%;
+            padding-right: 17%;
+        }
+
+        .dataCasamento {
+            width: 100%;
+            padding-top: 0.5rem;
+
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+
+        .col-12.menu {
+            padding-left: 3%;
+            padding-right: 1%;
+        }
+
+        .enderecoCasamento {
+            padding-top: 0.5rem;
+            padding-left: 17%;
+            padding-right: 17%;
+            padding-bottom: 1.0rem;
+        }
+
+/*cELULAR*/
+
+        .menus.col-12 {
+            width: 100%;
+            align-content: space-between;
+            border: 5%;
+            padding-left: 12%;
+            display: inline-flex;
+            padding-bottom: 18%;
+            padding-top: 0;
+            padding-bottom: 0;
+
+        }
+
+
+
+        .iconessLocalizacao .iconePresenca .iconelista {}
+
+        .iconelista {}
+
+        .iconessLocalizacao {}
+
+        .iconePresenca {}
+
+        .maps {
+            width: 100%;
+            height: auto;
+
+            padding-top: 1.5rem;
+
+            border: 0;
+            margin: 0;
+        }
+
+
+        .aside {
+            padding: 15px;
+            color: #be4e6b;
+            /* text-align: center;*/
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .footer {
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            /* For tablets: */
+            .col-s-1 {
+                width: 8.33%;
+            }
+
+            .col-s-2 {
+                width: 16.66%;
+            }
+
+            .col-s-3 {
+                width: 25%;
+            }
+
+            .col-s-4 {
+                width: 33.33%;
+            }
+
+            .col-s-5 {
+                width: 41.66%;
+            }
+
+            .col-s-6 {
+                width: 50%;
+            }
+
+            .col-s-7 {
+                width: 58.33%;
+            }
+
+            .col-s-8 {
+                width: 66.66%;
+            }
+
+            .col-s-9 {
+                width: 75%;
+            }
+
+            .col-s-10 {
+                width: 83.33%;
+            }
+
+            .col-s-11 {
+                width: 91.66%;
+            }
+
+            .col-s-12 {
+                width: 100%;
+            }
+
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 10%;
+                /* margin: 1%; */
+            }
+
+            .menus {
+                padding-left: 22%;
+                padding-right: 17%;
+            }
+
+            div.menu .col-4 {
+                margin-left: 52%;
+            }
+
+            /*
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 10%;
+                padding-left: 24%;
+                display: inline-flex;
+                padding-bottom: 18%;
+
+            }
+*/
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            /* For desktop: */
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+
+            /*
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 10%;
+                padding-left: 24%;
+                display: inline-flex;
+                padding-bottom: 18%;
+
+            }*/
+
+            /*TABLET E ´PC*/
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 5%;
+                padding-left: 22%;
+                display: inline-flex;
+                padding-bottom: 18%;
+            }
+
+
+            .enderecoCasamento{
+padding: 0%;
+                padding-left: 0%;
+                padding-right: 0%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <img class="floral" src="src/img/floral2.png" alt="">
+    <div class="home col-12">
+
+
+        <a href="index.html"><img class="nomes" src="src/img/localizacaoFonte.PNG" width="80%" alt=""></a>
+
+
+
+        <img class="florCentro" src="src/img/floresmeio2.png" alt="">
+
+        <div class="row">
+
+            <img class="enderecoCasamento" src="src/img/endereçoCasamento.PNG" width="100%"  alt="">
+
+        </div>
+
+      
+        <!--Local e Maps-->
+        <div class="row">
+            <div class="col-6 local">
+                <img class="localização" src="src/img/localização.jpg" width="100%" alt="">
+            </div>
+            <div class="col-6 maps">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.556169347731!2d-46.93801422509664!3d-23.573324078791654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf06fc51ad158d%3A0x833e3f3b1f5e524e!2sMapri%20Eventos!5e1!3m2!1spt-BR!2sbr!4v1722538430608!5m2!1spt-BR!2sbr"
+                    width="100%" height="300px" style="border:0;padding:0; margin: 0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="row divisoria"></div>
+<!--- menu -->
+<div class="row">
+    <div class="menus col-12 ">
+        <div class="menu col-6 "><!--class="iconelista" -->
+            <a href="listaPresentes.html"> <img src="src/img/iconessLista.png" width="54%" alt=""></a>
+        </div>
+        <div class="menu col-6 "><!--class="iconePresenca" -->
+            <a href="confirmarpresenca.html"> <img src="src/img/iconessConfirme2.png" width="70%" alt=""></a>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="row divisoria"></div>
+
+<div class="footer col-12">
+<div class="col-12">
+
+    <a href="index.html"><img class="nomes" src="src/img/nomesTrasparente.PNG" height="100%" alt=""></a>
+    <br><br>
+</div>
+<p>
+    <span>
+        <a href="https://api.whatsapp.com/send?phone=5511930561783"><b>WhatsApp da Noiva</b></a>
+        &nbsp; &nbsp;e&nbsp;&nbsp;
+        <a href="https://api.whatsapp.com/send?phone=5511989104635">
+            <b>WhatsApp do Noivo</b></a>
+    </span>
+    <br><br>
+
+</p>
+<br><br>
+
+</div>
+</body>
+
+</html>

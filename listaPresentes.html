@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background-image: url('src/img/Backgroud-1.png');
+            font-family: "Lucida Sans", sans-serif;
+            background-repeat: no-repeat;
+        }
+
+
+        body {
+            height: 90%;
+            width: 100%;
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        body .fundo {
+            background-image: image();
+            width: 100%;
+            height: 100%;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .header {
+            color: #ffffff;
+        }
+
+        .nomes {
+            width: 100%;
+
+            padding-left: 17%;
+            padding-right: 17%;
+
+            border: 0;
+            margin: 0;
+        }
+
+        .floral {
+            width: 100%;
+            border: 0;
+            margin: 0;
+        }
+
+        .florCentro {
+            width: 100%;
+            padding-left: 30%;
+            padding-right: 30%;
+            padding-bottom: 1.0rem;
+            border: 0;
+            margin: 0;
+        }
+
+        .fraseConvidados {
+            width: 100%;
+
+            padding-left: 17%;
+            padding-right: 17%;
+        }
+
+        .dataCasamento {
+            width: 100%;
+            padding-top: 0.5rem;
+
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+
+        .col-12.menu {
+            padding-left: 3%;
+            padding-right: 1%;
+        }
+
+        .enderecoCasamento {
+            padding-top: 0.5rem;
+            padding-left: 17%;
+            padding-right: 17%;
+            padding-bottom: 1.0rem;
+        }
+
+        .frasePresentes {
+            width: 100%;
+            padding-top: 0.5rem;
+
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+
+        .pixcode {
+            width: 100%;
+            padding-top: 1.5rem;
+
+            padding-left: 28%;
+            padding-right: 28%;
+        }
+
+        /*cELULAR*/
+
+        .menus.col-12 {
+            width: 100%;
+            align-content: space-between;
+            border: 5%;
+            padding-left: 12%;
+            display: inline-flex;
+            padding-bottom: 18%;
+            padding-top: 0;
+            padding-bottom: 0;
+
+        }
+
+
+
+        .iconessLocalizacao .iconePresenca .iconelista {}
+
+        .iconelista {}
+
+        .iconessLocalizacao {}
+
+        .iconePresenca {}
+
+        .maps {
+            width: 100%;
+            height: auto;
+
+            padding-top: 1.5rem;
+
+            border: 0;
+            margin: 0;
+        }
+
+
+        .aside {
+            padding: 15px;
+            color: #be4e6b;
+            /* text-align: center;*/
+            font-size: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .footer {
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            /* For tablets: */
+            .col-s-1 {
+                width: 8.33%;
+            }
+
+            .col-s-2 {
+                width: 16.66%;
+            }
+
+            .col-s-3 {
+                width: 25%;
+            }
+
+            .col-s-4 {
+                width: 33.33%;
+            }
+
+            .col-s-5 {
+                width: 41.66%;
+            }
+
+            .col-s-6 {
+                width: 50%;
+            }
+
+            .col-s-7 {
+                width: 58.33%;
+            }
+
+            .col-s-8 {
+                width: 66.66%;
+            }
+
+            .col-s-9 {
+                width: 75%;
+            }
+
+            .col-s-10 {
+                width: 83.33%;
+            }
+
+            .col-s-11 {
+                width: 91.66%;
+            }
+
+            .col-s-12 {
+                width: 100%;
+            }
+
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 10%;
+                /* margin: 1%; */
+            }
+
+            .menus {
+                padding-left: 22%;
+                padding-right: 17%;
+            }
+
+            div.menu .col-4 {
+                margin-left: 52%;
+            }
+
+            /*
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 10%;
+                padding-left: 24%;
+                display: inline-flex;
+                padding-bottom: 18%;
+
+            }
+*/
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            /* For desktop: */
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+
+            /*
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 10%;
+                padding-left: 24%;
+                display: inline-flex;
+                padding-bottom: 18%;
+
+            }*/
+
+            /*TABLET E ´PC*/
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 5%;
+                padding-left: 22%;
+                display: inline-flex;
+                padding-bottom: 18%;
+
+            }
+
+            .img {
+                padding: 10%;
+
+                padding-left: 20%;
+                padding-right: 20%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <img class="floral" src="src/img/floral2.png" alt="">
+    <div class="home col-12">
+
+        <a href="indexHomeConvidado.html"><img class="nomes" src="src/img/nossaLista.PNG" alt=""></a>
+
+
+        <img class="frasePresentes" src="src/img/frase 2.PNG" width="200%" alt="">
+        <br><br>
+        <!-- 
+        <p>“Queridos convidados...
+        Sintam-se a vontade para nos presentear com o que sentir, podendo tambem, ser um item da lista, ou algum valor.
+        Saiba que sua presença já será o nosso maior presente!  
+        </p>
+        -->
+
+        <div class="row">
+            <a href="https://www.mercadolivre.com.br/presentes/presentes-de-casamento-oc8ty"><img class="img dataCasamento"
+                    src="src/img/tela2botao1.PNG" width="100%" alt=""></a>
+            <br>
+            <img class="pixcode" src="src/img/qrLPresente.PNG" width="50%" alt="">
+        </div>
+        <br><br>
+
+        <div class="row">
+            <img class="dataCasamento" src="src/img/tela2botao2.PNG" width="100%" alt="">
+            <br>
+            <img class="pixcode" src="src/img/pixcode2.PNG" width="50%" alt="">
+            <br>
+        </div>
+        <div class="row divisoria"></div>
+        <br><br>
+        <div class="row divisoria"></div>
+        <div class="row divisoria"></div>
+        <div class="row">
+            <img class="dataCasamento" src="src/img/obrigado.PNG" width="100%" alt=""></a>
+        </div>
+        <div class="row divisoria"></div>
+        <br><br>
+        <div class="row divisoria"></div>
+        <div class="row divisoria"></div>
+
+        <div class="row divisoria"></div>
+        <!--- menu -->
+        <div class="row">
+            <div class="menus col-12 ">
+                <div class="menu col "><!--class="iconePresenca" -->
+                    <a href="confirmarpresenca.html"> <img src="src/img/iconessConfirme2.png" width="55%" alt=""></a>
+                </div>
+                <div class="menu col "><!--lass="iconessLocalizacao" -->
+                    <a href="localizacao.html"> <img c src="src/img/iconessLocalizacao.png" width="55%" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row divisoria"></div>
+
+
+
+    <div class="footer col-12">
+        <div class="col-12 img">
+
+            <a href="index.html"><img class="florCentro" src="src/img/nomesTrasparente.PNG" height="50%" alt=""></a>
+            <br><br>
+        </div>
+        <p>
+            <span>
+                <a href="https://api.whatsapp.com/send?phone=5511930561783"><b>WhatsApp da Noiva</b></a>
+                &nbsp; &nbsp;e&nbsp;&nbsp;
+                <a href="https://api.whatsapp.com/send?phone=5511989104635">
+                    <b>WhatsApp do Noivo</b></a>
+            </span>
+            <br><br>
+
+        </p>
+        <br><br>
+
+    </div>
+
+
+</body>
+
+</html>

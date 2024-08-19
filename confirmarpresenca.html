@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Confirmar Presença | B&N</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background-image: url('src/img/Backgroud-1.png');
+            background-repeat: no-repeat;
+            /* font-size: 1.4rem;*/
+            font-size: calc(1vw + 1vh + 0.5vmin);
+            /* Ajusta a base da fonte de acordo com a largura da viewport */
+
+            font-family: 'Belleza', sans-serif;
+            color: #56555b;
+            /* Cor geral do texto */
+        }
+
+
+        body {
+            height: 90%;
+            width: 100%;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+            /* Tamanho da fonte será baseado no valor calculado no <html> */
+
+
+        }
+
+        body .fundo {
+            background-image: image();
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .header {
+            color: #ffffff;
+        }
+
+        div.divisoria {
+            height: 20%;
+        }
+
+        .nomes {
+            width: 100%;
+
+            padding-left: 17%;
+            padding-right: 17%;
+
+            border: 0;
+            margin: 0;
+        }
+
+        .floral {
+            width: 100%;
+            border: 0;
+            margin: 0;
+        }
+
+        .florCentro {
+            width: 100%;
+            padding-left: 30%;
+            padding-right: 30%;
+            padding-bottom: 1.0rem;
+            border: 0;
+            margin: 0;
+        }
+
+        h1 {
+            font: 'Amsterdam One', cursive;
+            color: #be4e6b;
+            /* Cor da fonte h1 */
+        }
+
+        h2,
+        p {
+            font: 'Belleza', sans-serif;
+            color: #838c8a;
+            /* Cor do texto */
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+        }
+
+        .full-screen {
+            margin-top: 0rem;
+            width: 100%;
+            margin-bottom: 1.5rem;
+
+        }
+
+        #timer {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 600rem;
+        }
+
+        #timer div {
+            text-align: center;
+        }
+
+        #timer span {
+            font-size: 0, 4rem;
+            display: block;
+        }
+
+        .fraseConvidados {
+            width: 100%;
+
+            padding-left: 17%;
+            padding-right: 17%;
+        }
+
+        .dataCasamento {
+            width: 100%;
+            padding-top: 0.5rem;
+
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+
+        .col-12.menu {
+            padding-left: 3%;
+            padding-right: 1%;
+        }
+
+        .enderecoCasamento {
+            padding-top: 0.5rem;
+            padding-left: 17%;
+            padding-right: 17%;
+            padding-bottom: 1.0rem;
+        }
+
+        /*cELULAR*/
+
+        .menus.col-12 {
+            width: 100%;
+            align-content: space-between;
+            border: 5%;
+            padding-left: 12%;
+            display: inline-flex;
+            padding-bottom: 18%;
+            padding-top: 0;
+            padding-bottom: 0;
+
+        }
+
+
+
+        .iconessLocalizacao .iconePresenca .iconelista {}
+
+        .iconelista {}
+
+        .iconessLocalizacao {}
+
+        .iconePresenca {}
+
+        .maps {
+            width: 100%;
+            height: auto;
+
+            padding-top: 1.5rem;
+
+            border: 0;
+            margin: 0;
+        }
+
+        .asideform {
+            padding: 13px;
+            color: #be4e6b;
+            border: none;
+            /* text-align: center;*/
+            height: auto;
+        }
+
+        .asideformradio,
+        textarea {
+            padding: 10px;
+            color: #be4e6b;
+            border: none;
+            /* text-align: center;*/
+            height: auto;
+            background-color: aliceblue;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            margin: 3px;
+            border-radius: 15px;
+
+        }
+
+        .wedding-Form form label,
+        input {
+            color: #be4e6b;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            background-color: aliceblue;
+            padding: 5px;
+            border-radius: 15px;
+
+        }
+
+
+        form label input,
+        radio {
+            color: #be4e6b;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            background-color: rgb(235, 241, 247);
+            padding: 10px;
+            margin: #be4e6b;
+            border: #be4e6b;
+            padding-bottom: 10px;
+            border-radius: 15px;
+
+        }
+
+        button {
+            padding-top: 20%;
+            padding: 10px;
+            color: #fcfcfc;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            background-color: #be4e6b;
+            border: none;
+        }
+
+        h3 {
+            margin: 10px;
+            margin-left: 0;
+        }
+
+        .footer {
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+        }
+
+        /* For mobile phones: */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            /* For tablets: */
+            .col-s-1 {
+                width: 8.33%;
+            }
+
+            .col-s-2 {
+                width: 16.66%;
+            }
+
+            .col-s-3 {
+                width: 25%;
+            }
+
+            .col-s-4 {
+                width: 33.33%;
+            }
+
+            .col-s-5 {
+                width: 41.66%;
+            }
+
+            .col-s-6 {
+                width: 50%;
+            }
+
+            .col-s-7 {
+                width: 58.33%;
+            }
+
+            .col-s-8 {
+                width: 66.66%;
+            }
+
+            .col-s-9 {
+                width: 75%;
+            }
+
+            .col-s-10 {
+                width: 83.33%;
+            }
+
+            .col-s-11 {
+                width: 91.66%;
+            }
+
+            .col-s-12 {
+                width: 100%;
+            }
+
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 10%;
+                /* margin: 1%; */
+            }
+
+            .menus {
+                padding-left: 22%;
+                padding-right: 17%;
+            }
+
+            div.menu .col-4 {
+                margin-left: 52%;
+            }
+
+            /*
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 10%;
+                padding-left: 24%;
+                display: inline-flex;
+                padding-bottom: 18%;
+
+            }
+*/
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            /* For desktop: */
+            .col-1 {
+                width: 8.33%;
+            }
+
+            .col-2 {
+                width: 16.66%;
+            }
+
+            .col-3 {
+                width: 25%;
+            }
+
+            .col-4 {
+                width: 33.33%;
+            }
+
+            .col-5 {
+                width: 41.66%;
+            }
+
+            .col-6 {
+                width: 50%;
+            }
+
+            .col-7 {
+                width: 58.33%;
+            }
+
+            .col-8 {
+                width: 66.66%;
+            }
+
+            .col-9 {
+                width: 75%;
+            }
+
+            .col-10 {
+                width: 83.33%;
+            }
+
+            .col-11 {
+                width: 91.66%;
+            }
+
+            .col-12 {
+                width: 100%;
+            }
+
+            /*
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 10%;
+                padding-left: 24%;
+                display: inline-flex;
+                padding-bottom: 18%;
+
+            }*/
+
+            /*TABLET E ´PC*/
+            .menus.col-12 {
+                width: 100%;
+                align-content: space-between;
+                border: 5%;
+                padding-left: 22%;
+                display: inline-flex;
+                padding-bottom: 18%;
+
+            }
+
+            .img {
+                padding: 5%;
+
+                padding-left: 20%;
+                padding-right: 20%;
+            }
+
+            form#weddingForm {
+                padding: 20%;
+                padding-top: 5%;
+            }
+
+            button {
+                padding-top: 20%;
+                padding: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <img class="floral" src="floral3.png" alt="">
+
+    <img class="dataCasamento" src="confirmarPresenca.PNG" width="100%" alt="">
+
+
+
+    <div class="col-12 col-s-12">
+
+        <form class="col-12" id="wedding-form" action="https://script.google.com/macros/s/AKfycbzE7J7El3_is_pNnSx5KF65F5OOYQ_k4X2l8Jt1r5GbC7sJPQLbE4WHhQLcJE9Tkdbs/exec" method="POST">
+
+            <div class="col-12 col-s-12">
+
+                <label class="asideform col-12" for="nome">
+                    <h5>Qual é o seu nome?*</h5>
+
+                    <input class="asideform col-12" type="text" id="nome" name="nome" required>
+                </label>
+
+                <label class="asideform col-12">
+                    <h5>Você é convidado do Noivo ou da Noiva?*</h5>
+                    <div class="asideformradio col-12">
+                        <input class="" type="radio" id="noivo" name="side" value="Noivo" required>
+                        <label class="asideform" for="noivo">Noivo </label>
+                        <input class="" type="radio" id="noiva" name="side" value="Noiva">
+                </label>
+                <label class="asideform" for="noiva">Noiva</label>
+            </div>
+            </label>
+
+            <label class="asideform col-12">
+                <h5>Poderá comparecer?*</h5>
+                <div class="asideformradio col-12 ">
+                    <label class="asideform col-12" for="sim">
+                        <input class="asideform " type="radio" id="sim" name="attendance" value="Sim, irei" required>
+                        Sim,
+                        irei</label> <br>
+                    <label class="asideform col-12" for="nao">
+                        <input class="asideform " type="radio" id="nao" name="attendance" value="Não">
+                        Não</label> <br>
+                    <label class="asideform col-12" for="confirmoDepois">
+                        <input class="asideform " type="radio" id="confirmoDepois" name="attendance"
+                            value="Confirmo depois"> Confirmo depois</label>
+                    </h5>
+                </div>
+            </label>
+            <div class="asideform col-12 ">
+
+                <label class="asideform col-12" for="message">
+                    <h5>Envie uma mensagem aos Noivos</h5>
+                </label>
+                <textarea class="asideform col-12" id="message" name="message" rows="4" cols="50"></textarea>
+            </div>
+
+            <button class="button col-12" type="submit">Enviar</button>
+
+        </form>
+    </div>
+    <div class="row divisoria"></div>
+    <br><br>
+    <div class="row divisoria"></div>
+    <div class="row divisoria"></div>
+    <!-- TEMPO-->
+    <section id="countdown" class="full-screen" width="100%">
+        <h3>Contagem Regressiva para o Casamento</h3> <br>
+        <div class="col tempo " id="timer" width="100%">
+            <div class="col ">
+                <span class="col " id="days"></span>
+                Dias
+            </div>
+            <div>
+                <span class="col " id="hours"></span>
+                Horas
+            </div>
+            <div>
+                <span class="col " id="minutes"></span>
+                Minutos
+            </div>
+            <div>
+                <span class="col " id="seconds"></span>
+                Segundos
+            </div>
+        </div>
+    </section>
+
+    <!-- divisoria --------------------------------------------------------------------
+                fraseConvidados, dataCasamento,enderecoCasamento
+                -->
+    <div class="row divisoria"></div>
+    <br><br>
+    <div class="row divisoria"></div>
+
+    <!--- menu -->
+    <div class="row">
+        <div class="menus col-12 ">
+            <div class="menu col "><!--class="iconelista" --></div>
+
+            <div class="menu col "><!--class="iconelista" -->
+                <a href="listaPresentes.html"> <img src="iconessLista.png" width="54%" alt=""></a>
+            </div>
+            <div class="menu col "><!--class="iconelista" --></div>
+
+            <div class="menu col "><!--lass="iconessLocalizacao" -->
+                <a href="localizacao.html"> <img c src="iconessLocalizacao.png" width="55%" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="row divisoria"></div>
+
+
+    <div class="row divisoria"></div>
+
+    <!--Local e Maps-->
+    <!--
+        <div class="row">
+            <div class="col-6 local">
+                <img class="localização" src="localização.jpg" width="100%" alt="">
+            </div>
+            <div class="col-6 maps">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.556169347731!2d-46.93801422509664!3d-23.573324078791654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf06fc51ad158d%3A0x833e3f3b1f5e524e!2sMapri%20Eventos!5e1!3m2!1spt-BR!2sbr!4v1722538430608!5m2!1spt-BR!2sbr"
+                    width="100%" height="300px" style="border:0;padding:0; margin: 0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    -->
+
+
+
+    <div class="footer col-12">
+        <div class="col-12 img">
+            <a href="index.html"><img class="nomes" src="src/img/nomesTrasparente.PNG" height="100%" alt=""></a>
+            <br><br>
+        </div>
+        <p>
+            <span>
+                <a href="https://api.whatsapp.com/send?phone=5511930561783"><b>WhatsApp da Noiva</b></a>
+                &nbsp; &nbsp;e&nbsp;&nbsp;
+                <a href="https://api.whatsapp.com/send?phone=5511989104635">
+                    <b>WhatsApp do Noivo</b></a>
+            </span>
+            <br><br>
+
+        </p>
+        <br><br>
+
+    </div>
+
+
+    <script>/** Time ***/
+
+        const countdownDate = new Date("Nov 3, 2024 00:00:00").getTime();
+        const timerElements = {
+            days: document.getElementById("days"),
+            hours: document.getElementById("hours"),
+            minutes: document.getElementById("minutes"),
+            seconds: document.getElementById("seconds")
+        };
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "O casamento já aconteceu!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            timerElements.days.textContent = days;
+            timerElements.hours.textContent = hours;
+            timerElements.minutes.textContent = minutes;
+            timerElements.seconds.textContent = seconds;
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+    </script>
+
+    <!--JavaScript para Envio de Dados (Frontend)-->
+    <script>/**
+        document.getElementById("wedding-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var formData = new FormData(event.target);
+            var formObject = {};
+            formData.forEach((value, key) => formObject[key] = value);
+
+            var scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec'; // Substitua pelo ID do seu script
+            fetch(scriptURL, { method: 'POST', body: JSON.stringify(formObject) })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        alert("Dados enviados com sucesso!");
+                    } else {
+                        alert("Erro ao enviar dados. Tente novamente.");
+                    }
+                })
+                .catch(error => console.error('Error!', error.message));
+        });**/
+    </script>
+
+
+
+    <script>/**
+        document.getElementById("wedding-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+    
+            var formData = new FormData(event.target);
+            var formObject = {};
+            formData.forEach((value, key) => formObject[key] = value);
+    
+            var scriptURL = 'https://script.google.com/macros/s/AKfycby9Ut3SIK6GnYABpfZsAkGFvx4S9xxFNl3HHRDeVITakTZRfGpmEdSvFbZoNnxSFQ7b/exec'; // Substitua pelo ID do seu script
+            fetch(scriptURL, { method: 'POST', body: JSON.stringify(formObject) })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        alert("Dados enviados com sucesso!");
+                    } else {
+                        alert("Erro ao enviar dados. Tente novamente.");
+                    }
+                })
+                .catch(error => console.error('Error!', error.message));
+        });**/
+    </script>
+<script>
+
+    /* Envio do Formulário */
+    document.getElementById("wedding-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var formData = new FormData(event.target);
+        var formObject = {};
+        formData.forEach((value, key) => formObject[key] = value);
+
+        var scriptURL = 'https://script.google.com/macros/s/AKfycbzE7J7El3_is_pNnSx5KF65F5OOYQ_k4X2l8Jt1r5GbC7sJPQLbE4WHhQLcJE9Tkdbs/exec'; // Substitua pelo ID correto
+        fetch(scriptURL, { method: 'POST', body: JSON.stringify(formObject) })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    alert("Dados enviados com sucesso!");
+                } else {
+                    alert("Erro ao enviar dados. Tente novamente.");
+                }
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
+</script>
+</body>
+
+
+
+</body>
+
+</html>

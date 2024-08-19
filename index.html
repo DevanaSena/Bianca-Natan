@@ -2,50 +2,63 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bianca & Natan</title>
+    <link rel="icon" href="caminho/para/seu-icone.ico" type="image/x-icon">
 
+    <title> Convite de Casamento | B&N</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
             box-sizing: border-box;
         }
 
         html {
-            background-image: url('Backgroud-1.png');
-            font-family: "Lucida Sans", sans-serif;
+            background-image: url('src/img/Backgroud-1.png');
             background-repeat: no-repeat;
+            /* font-size: 1.4rem;*/
+            font-size: calc(1vw + 1vh + 0.5vmin);
+            /* Ajusta a base da fonte de acordo com a largura da viewport */
+
+            font-family: 'Belleza', sans-serif;
+            color: #56555b;
+            /* Cor geral do texto */
         }
-
-
         body {
             height: 90%;
             width: 100%;
             border: 0;
             margin: 0;
             padding: 0;
-        }
+            font-size: 1rem;
+            /* Tamanho da fonte será baseado no valor calculado no <html> */
 
+
+        }
         body .fundo {
             background-image: image();
             width: 100%;
             height: 100%;
         }
-
         .row::after {
             content: "";
             clear: both;
             display: table;
         }
-
         [class*="col-"] {
             float: left;
             padding: 15px;
         }
-
         .header {
             color: #ffffff;
         }
+        /*controle musica*/
+        #music-controls {
+            margin-top: 20px;
+        }
 
+        div.divisoria {
+            height: 20%;
+        }
         .nomes {
             width: 100%;
 
@@ -55,13 +68,11 @@
             border: 0;
             margin: 0;
         }
-
         .floral {
             width: 100%;
             border: 0;
             margin: 0;
         }
-
         .florCentro {
             width: 100%;
             padding-left: 30%;
@@ -70,14 +81,50 @@
             border: 0;
             margin: 0;
         }
+        h1 {
+            font: 'Amsterdam One', cursive;
+            color: #be4e6b;
+            /* Cor da fonte h1 */
+        }
+        h2,
+        p {
+            font: 'Belleza', sans-serif;
+            color: #838c8a;
+            /* Cor do texto */
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
 
+        }
+        .full-screen {
+            margin-top: 0rem;
+            width: 100%;
+            margin-bottom: 1.5rem;
+
+        }
+        #timer {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 600rem;
+        }
+        #timer div {
+            text-align: center;
+        }
+        #timer span {
+            font-size: 0, 4rem;
+            display: block;
+        }
         .fraseConvidados {
             width: 100%;
 
             padding-left: 17%;
             padding-right: 17%;
         }
-
         .dataCasamento {
             width: 100%;
             padding-top: 0.5rem;
@@ -85,21 +132,17 @@
             padding-left: 8%;
             padding-right: 8%;
         }
-
         .col-12.menu {
             padding-left: 3%;
             padding-right: 1%;
         }
-
         .enderecoCasamento {
             padding-top: 0.5rem;
             padding-left: 17%;
             padding-right: 17%;
             padding-bottom: 1.0rem;
         }
-
         /*cELULAR*/
-
         .menus.col-12 {
             width: 100%;
             align-content: space-between;
@@ -111,17 +154,6 @@
             padding-bottom: 0;
 
         }
-
-
-
-        .iconessLocalizacao .iconePresenca .iconelista {}
-
-        .iconelista {}
-
-        .iconessLocalizacao {}
-
-        .iconePresenca {}
-
         .maps {
             width: 100%;
             height: auto;
@@ -132,13 +164,60 @@
             margin: 0;
         }
 
-
-        .aside {
-            padding: 15px;
+        .asideform {
+            padding: 13px;
             color: #be4e6b;
+            border: none;
             /* text-align: center;*/
-            font-size: 14px;
+            height: auto;
+        }
+        .asideformradio,
+        textarea {
+            padding: 10px;
+            color: #be4e6b;
+            border: none;
+            /* text-align: center;*/
+            height: auto;
+            background-color: aliceblue;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            margin: 3px;
+            border-radius: 15px;
+
+        }
+        .wedding-Form form label,
+        input {
+            color: #be4e6b;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            background-color: aliceblue;
+            padding: 5px;
+            border-radius: 15px;
+
+        }
+        form label input,
+        radio {
+            color: #be4e6b;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            background-color: rgb(235, 241, 247);
+            padding: 10px;
+            margin: #be4e6b;
+            border: #be4e6b;
+            padding-bottom: 10px;
+            border-radius: 15px;
+
+        }
+
+        button {
+            padding-top: 20%;
+            padding: 10px;
+            color: #fcfcfc;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            background-color: #be4e6b;
+            border: none;
+        }
+
+        h3 {
+            margin: 10px;
+            margin-left: 0;
         }
 
         .footer {
@@ -306,58 +385,199 @@
 
             }
 
+            .img {
+                padding: 5%;
+
+                padding-left: 20%;
+                padding-right: 20%;
+            }
+
+            form#weddingForm {
+                padding: 20%;
+                padding-top: 5%;
+            }
+
+            button {
+                padding-top: 20%;
+                padding: 10px;
+            }
 
         }
     </style>
+
 </head>
 
 <body>
-    <img class="floral" src="floral2.png" alt="">
+    <img class="floral" src="src/img/floral3.png" alt="">
     <div class="home col-12">
 
+       <!--Controles de áudio -->
+        <div id="music-controls">
+           <!-- <button id="play-button">Play</button>-->
+            <button id="pause-button">Som</button>
+            <audio id="audio-player" preload="auto" loop>
+                <!-- Adicione as músicas aqui -->
+                <source src="/src/media/1.mp3" type="audio/mpeg">
+                <source src="/src/media/2.mp3" type="audio/mpeg">
+                <source src="/src/media/3.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
 
-        <img class="nomes" src="nomesTrasparente.PNG" alt="">
+        <img class="nomes" src="src/img/nomesTrasparente.PNG" width="80%" alt="">
 
 
+        <img class="florCentro" src="src/img/floresmeio2.png" width="50%" alt="">
+        <!-- divisoria --------------------------------------------------------------------
+        fraseConvidados, dataCasamento,enderecoCasamento
+        -->
 
-        <img class="florCentro" src="floresmeio2.png" alt="">
+        <!-- TEMPO-->
+        <section id="countdown" class="full-screen" width="100%">
+            <h3>Contagem Regressiva para o Casamento</h3> <br>
+            <div class="col tempo " id="timer" width="100%">
+                <div class="col ">
+                    <span class="col " id="days"></span>
+                    Dias
+                </div>
+                <div>
+                    <span class="col " id="hours"></span>
+                    Horas
+                </div>
+                <div>
+                    <span class="col " id="minutes"></span>
+                    Minutos
+                </div>
+                <div>
+                    <span class="col " id="seconds"></span>
+                    Segundos
+                </div>
+            </div>
+        </section>
+
+        <!-- divisoria --------------------------------------------------------------------
+        fraseConvidados, dataCasamento,enderecoCasamento
+        -->
+        <div class="row divisoria"></div>
 
 
-        <img class="fraseConvidados" src="fraseConvidados.PNG" width="100%" alt="">
+        <img class=" img fraseConvidados" src="src/img/fraseConvidados.PNG" width="100%" alt="">
         <!-- <p>“E sabemos que todas as coisas<br> contribuem juntamente para o bem <br>
                 daqueles que amam a Deus”<br>
                 Romanos 8:28</p>-->
 
+        <div class="row divisoria"></div>
+
         <div class="row">
 
-            <img class="dataCasamento" src="dataCasamento.PNG" width="100%" alt="">
+            <img class="img dataCasamento" src="src/img/dataCasamento.PNG" width="100%" alt="">
 
-            <img class="enderecoCasamento" src="endereçoCasamento.PNG" width="100%" alt="">
+            <!-- divisoria ---------------------------------------------------------------------->
+            <div class="row divisoria"></div>
+
+            <img class=" img enderecoCasamento" src="src/img/endereçoCasamento.PNG" width="100%" alt="">
 
         </div>
 
+        <div class="row divisoria"></div>
         <!--- menu -->
         <div class="row">
-            <div class="menus col-12">
-                <div class="menu col-4 "><!--class="iconelista" -->
-                    <a href="presenteConvidado.html"> <img src="iconessLista.png" width="44%" alt=""></a>
+            <div class="menus col-12 ">
+                <div class="menu col "><!--class="iconelista" -->
+                    <a href="listaPresentes.html"> <img src="src/img/iconessLista.png" width="54%" alt=""></a>
                 </div>
-                <div class="menu col-4 "><!--class="iconePresenca" -->
-                    <a href="confirmarConvidado.html"> <img src="iconessConfirme2.png" width="55%" alt=""></a>
+                <div class="menu col "><!--class="iconePresenca" -->
+                    <a href="confirmarpresenca.html"> <img src="src/img/iconessConfirme2.png" width="55%" alt=""></a>
                 </div>
-                <div class="menu col-4 "><!--lass="iconessLocalizacao" -->
-                    <a href="localConvidado.html"> <img c src="iconessLocalizacao.png" width="44%" alt=""></a>
+                <div class="menu col "><!--lass="iconessLocalizacao" -->
+                    <a href="localizacao.html"> <img c src="src/img/iconessLocalizacao.png" width="55%" alt=""></a>
                 </div>
             </div>
         </div>
-    
-    </div>
 
 
-    <div class="footer">
-        <p>Resize the browser window to see how the content respond to the resizing.</p>
-    </div>
+        <div class="row divisoria"></div>
 
+
+
+        <div class="footer col-12">
+            <div class="col-12">
+
+                <a href="index.html"><img class="florCentro" src="src/img/floresmeio2.PNG" height="100%" alt=""></a>
+                <br><br>
+            </div>
+            <p>
+                <span>
+                    <a href="https://api.whatsapp.com/send?phone=5511930561783"><b>WhatsApp da Noiva</b></a>
+                    &nbsp; &nbsp;e&nbsp;&nbsp;
+                    <a href="https://api.whatsapp.com/send?phone=5511989104635">
+                        <b>WhatsApp do Noivo</b></a>
+                </span>
+                <br><br>
+
+            </p>
+            <br><br>
+
+        </div>
+
+
+        <script>
+
+            const countdownDate = new Date("Nov 3, 2024 00:00:00").getTime();
+            const timerElements = {
+                days: document.getElementById("days"),
+                hours: document.getElementById("hours"),
+                minutes: document.getElementById("minutes"),
+                seconds: document.getElementById("seconds")
+            };
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById("countdown").innerHTML = "O casamento já aconteceu!";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                timerElements.days.textContent = days;
+                timerElements.hours.textContent = hours;
+                timerElements.minutes.textContent = minutes;
+                timerElements.seconds.textContent = seconds;
+            }
+
+            const countdownInterval = setInterval(updateCountdown, 1000);
+
+        </script>
+
+        <!--JavaScript para Envio de Dados (Frontend)-->
+        <script>
+            document.getElementById("wedding-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                var formData = new FormData(event.target);
+                var formObject = {};
+                formData.forEach((value, key) => formObject[key] = value);
+
+                var scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec'; // Substitua pelo ID do seu script
+                fetch(scriptURL, { method: 'POST', body: JSON.stringify(formObject) })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.result === 'success') {
+                            alert("Dados enviados com sucesso!");
+                        } else {
+                            alert("Erro ao enviar dados. Tente novamente.");
+                        }
+                    })
+                    .catch(error => console.error('Error!', error.message));
+            });
+        </script>
 </body>
 
 </html>
