@@ -3,7 +3,7 @@
 }
 
 html {
-    background-image: url('src/img/Backgroud-1.png');
+    background-image: url('/src/img/Backgroud-1.png');
     background-repeat: no-repeat;
     /* font-size: 1.4rem;*/
     font-size: calc(1vw + 1vh + 0.5vmin);
