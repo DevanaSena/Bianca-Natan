@@ -9,7 +9,7 @@
         <link rel="icon" href="src/img/icone.PNG" type="image/x-icon">
 
 
-       -<style>
+       <style>
         * {
             box-sizing: border-box;
         }
@@ -414,17 +414,20 @@
     <div class="home col-12">
 
        <!--Controles de áudio -->
-        <div id="music-controls">
-           <!-- <button id="play-button">Play</button>-->
-            <button id="pause-button">Som</button>
-            <audio id="audio-player" preload="auto" loop>
+
+        <div id="animated_div" id="music-controls">
+            <!-- <i class="animated_div"><img class="som" src="src/img/cd_music_love_song.svg" width="30px"></i> <button id="play-button">Play</button>-->
+            <audio controls autoplay loop id="audio-player" >
                 <!-- Adicione as músicas aqui -->
-                <source src="/src/media/1.mp3" type="audio/mpeg">
-                <source src="/src/media/2.mp3" type="audio/mpeg">
-                <source src="/src/media/3.mp3" type="audio/mpeg">
+                <source src="src/media/2.mp3" type="audio/mp3">
+                <source src="src/media/3.mp3" type="audio/mp3">
+                <source src="src/media/1.mp3" type="audio/mp3">
                 Seu navegador não suporta o elemento de áudio.
             </audio>
+
         </div>
+
+
 
         <img class="nomes" src="src/img/nomesTrasparente.PNG" width="80%" alt="">
 
@@ -558,28 +561,7 @@
 
         </script>
 
-        <!--JavaScript para Envio de Dados (Frontend)-->
-        <script>
-            document.getElementById("wedding-form").addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                var formData = new FormData(event.target);
-                var formObject = {};
-                formData.forEach((value, key) => formObject[key] = value);
-
-                var scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec'; // Substitua pelo ID do seu script
-                fetch(scriptURL, { method: 'POST', body: JSON.stringify(formObject) })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.result === 'success') {
-                            alert("Dados enviados com sucesso!");
-                        } else {
-                            alert("Erro ao enviar dados. Tente novamente.");
-                        }
-                    })
-                    .catch(error => console.error('Error!', error.message));
-            });
-        </script>
+     
 </body>
 
 </html>
