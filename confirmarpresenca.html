@@ -438,62 +438,97 @@
 </head>
 
 <body>
-    <img class="floral" src="floral3.png" alt="">
+    <img class="floral" src="src/img/floral3.png" alt="">
 
     <img class="dataCasamento" src="confirmarPresenca.PNG" width="100%" alt="">
 
-
-
     <div class="col-12 col-s-12">
 
-        <form class="col-12" id="wedding-form" action="https://script.google.com/macros/s/AKfycbzE7J7El3_is_pNnSx5KF65F5OOYQ_k4X2l8Jt1r5GbC7sJPQLbE4WHhQLcJE9Tkdbs/exec" method="POST">
+                <!--Confirmar Presença-->
+                <div>
 
-            <div class="col-12 col-s-12">
+               <!-- <img class="flor5MeioDir" src="src/img/flor5MeioDir.png" alt="">
+        
+                    <img class="dataCasamento" src="src/img/confirmarPresenca.PNG" width="100%" alt="" id="contact">-->
+        
+                    <div class="col-12 col-s-12">
+        
+                        <form class="col-12" id="wedding-form"
+                            action="https://script.google.com/macros/s/AKfycbxsrp1IdwwDGjRYHjcgPyI-ksr7DY2qhvK6bKfs7KT5MAF0xLbcB0Xb9Cg7LpJ6M0GA/exec"
+                            method="POST" onsubmit="return handleFormSubmit(event)">
+                            <div class="col-12 col-s-12">
+                                <label class="asideform col-12" for="nome">
+                                    <h5>Qual é o seu nome?*</h5>
+                                    <input class="asideform col-12" type="text" id="nome" name="nome" required>
+                                </label>
+        
+                                <label class="asideform col-12">
+                                    <h5>Você é convidado do Noivo ou da Noiva?*</h5>
+                                    <div class="asideformradio col-12">
+                                        <input class="" type="radio" id="noivo" name="side" value="Noivo" required>
+                                        <label class="asideform" for="noivo">Noivo</label>
+                                        <input class="" type="radio" id="noiva" name="side" value="Noiva">
+                                        <label class="asideform" for="noiva">Noiva</label>
+                                    </div>
+                                </label>
+        
+                                <label class="asideform col-12">
+                                    <h5>Poderá comparecer?*</h5>
+                                    <div class="asideformradio col-12">
+                                        <label class="asideform col-12" for="sim">
+                                            <input class="asideform " type="radio" id="sim" name="attendance" value="Sim, irei"
+                                                required> Sim, irei
+                                        </label><br>
+                                        <label class="asideform col-12" for="nao">
+                                            <input class="asideform " type="radio" id="nao" name="attendance" value="Não">
+                                            Não
+                                        </label><br>
+                                        <label class="asideform col-12" for="confirmoDepois">
+                                            <input class="asideform " type="radio" id="confirmoDepois" name="attendance"
+                                                value="Confirmo depois"> Confirmo depois
+                                        </label>
+                                    </div>
+                                </label>
+        
+                                <div class="asideform col-12">
+                                    <label class="asideform col-12" for="message">
+                                        <h5>Envie uma mensagem aos Noivos</h5>
+                                    </label>
+                                    <textarea class="asideform col-12" id="message" name="message" rows="4"
+                                        cols="50"></textarea>
+                                </div>
+        
+                                <button class="button col-12" type="submit">Enviar</button>
+        
+                            </div>
+                        </form>
+        
+                        <!-- ver dados cadastrados-->
+                        <p class="col-12" id="form-status"></p>
+                        <div class="col-12">
+                            <!-- <div class="row">
+                    
+                                    <button class="button col-6" id="load-data" progress>Carregar Dados</button>
+                    
+                                </div>-->
+                            <table class="col-12" id="data-table">
+                                <thead>
+                                    <tr>
+                                        <!-- Cabeçalhos da tabela serão inseridos aqui -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Linhas de dados serão inseridas aqui -->
+                                </tbody>
+                            </table>
+                        </div>
+        
+        
+                    </div>    
 
-                <label class="asideform col-12" for="nome">
-                    <h5>Qual é o seu nome?*</h5>
 
-                    <input class="asideform col-12" type="text" id="nome" name="nome" required>
-                </label>
 
-                <label class="asideform col-12">
-                    <h5>Você é convidado do Noivo ou da Noiva?*</h5>
-                    <div class="asideformradio col-12">
-                        <input class="" type="radio" id="noivo" name="side" value="Noivo" required>
-                        <label class="asideform" for="noivo">Noivo </label>
-                        <input class="" type="radio" id="noiva" name="side" value="Noiva">
-                </label>
-                <label class="asideform" for="noiva">Noiva</label>
-            </div>
-            </label>
 
-            <label class="asideform col-12">
-                <h5>Poderá comparecer?*</h5>
-                <div class="asideformradio col-12 ">
-                    <label class="asideform col-12" for="sim">
-                        <input class="asideform " type="radio" id="sim" name="attendance" value="Sim, irei" required>
-                        Sim,
-                        irei</label> <br>
-                    <label class="asideform col-12" for="nao">
-                        <input class="asideform " type="radio" id="nao" name="attendance" value="Não">
-                        Não</label> <br>
-                    <label class="asideform col-12" for="confirmoDepois">
-                        <input class="asideform " type="radio" id="confirmoDepois" name="attendance"
-                            value="Confirmo depois"> Confirmo depois</label>
-                    </h5>
-                </div>
-            </label>
-            <div class="asideform col-12 ">
-
-                <label class="asideform col-12" for="message">
-                    <h5>Envie uma mensagem aos Noivos</h5>
-                </label>
-                <textarea class="asideform col-12" id="message" name="message" rows="4" cols="50"></textarea>
-            </div>
-
-            <button class="button col-12" type="submit">Enviar</button>
-
-        </form>
     </div>
     <div class="row divisoria"></div>
     <br><br>
@@ -548,21 +583,6 @@
 
 
     <div class="row divisoria"></div>
-
-    <!--Local e Maps-->
-    <!--
-        <div class="row">
-            <div class="col-6 local">
-                <img class="localização" src="localização.jpg" width="100%" alt="">
-            </div>
-            <div class="col-6 maps">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.556169347731!2d-46.93801422509664!3d-23.573324078791654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf06fc51ad158d%3A0x833e3f3b1f5e524e!2sMapri%20Eventos!5e1!3m2!1spt-BR!2sbr!4v1722538430608!5m2!1spt-BR!2sbr"
-                    width="100%" height="300px" style="border:0;padding:0; margin: 0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    -->
 
 
 
@@ -621,77 +641,8 @@
 
     </script>
 
-    <!--JavaScript para Envio de Dados (Frontend)-->
-    <script>/**
-        document.getElementById("wedding-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            var formData = new FormData(event.target);
-            var formObject = {};
-            formData.forEach((value, key) => formObject[key] = value);
-
-            var scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec'; // Substitua pelo ID do seu script
-            fetch(scriptURL, { method: 'POST', body: JSON.stringify(formObject) })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.result === 'success') {
-                        alert("Dados enviados com sucesso!");
-                    } else {
-                        alert("Erro ao enviar dados. Tente novamente.");
-                    }
-                })
-                .catch(error => console.error('Error!', error.message));
-        });**/
-    </script>
-
-
-
-    <script>/**
-        document.getElementById("wedding-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-    
-            var formData = new FormData(event.target);
-            var formObject = {};
-            formData.forEach((value, key) => formObject[key] = value);
-    
-            var scriptURL = 'https://script.google.com/macros/s/AKfycby9Ut3SIK6GnYABpfZsAkGFvx4S9xxFNl3HHRDeVITakTZRfGpmEdSvFbZoNnxSFQ7b/exec'; // Substitua pelo ID do seu script
-            fetch(scriptURL, { method: 'POST', body: JSON.stringify(formObject) })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.result === 'success') {
-                        alert("Dados enviados com sucesso!");
-                    } else {
-                        alert("Erro ao enviar dados. Tente novamente.");
-                    }
-                })
-                .catch(error => console.error('Error!', error.message));
-        });**/
-    </script>
-<script>
-
-    /* Envio do Formulário */
-    document.getElementById("wedding-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        var formData = new FormData(event.target);
-        var formObject = {};
-        formData.forEach((value, key) => formObject[key] = value);
-
-        var scriptURL = 'https://script.google.com/macros/s/AKfycbzE7J7El3_is_pNnSx5KF65F5OOYQ_k4X2l8Jt1r5GbC7sJPQLbE4WHhQLcJE9Tkdbs/exec'; // Substitua pelo ID correto
-        fetch(scriptURL, { method: 'POST', body: JSON.stringify(formObject) })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result === 'success') {
-                    alert("Dados enviados com sucesso!");
-                } else {
-                    alert("Erro ao enviar dados. Tente novamente.");
-                }
-            })
-            .catch(error => console.error('Error!', error.message));
-    });
-</script>
-</body>
-
+    <script src="src/js/formPos.js"></script>
+    <script src="src/js/formGet.js"></script>
 
 
 </body>
