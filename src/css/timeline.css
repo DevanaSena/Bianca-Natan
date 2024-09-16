@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+/*timeline*/
+.containertimeline {
+  /*  background: linear-gradient(to right, rgba(235, 188, 167, 0.624), rgba(207, 199, 248, 0.742));*/
+padding: 8%;  
+}
+img.floralname {
+  padding: 8%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+  
+  
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 100%) {
+  
+    /* Place the timelime to the left */
+    .main-timeline-4::after {
+      left: 31px;
+    }
+  
+    /* Full-width containers */
+    .timeline-4 {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline-4::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left-4::after,
+    .right-4::after {
+      left: 18px;
+    }
+  
+    .left-4::before {
+      right: auto;
+    }
+  
+    /* Make all right containers behave like the left ones */
+    .right-4 {
+      left: 0%;
+    }
+  }
+  
+  .gradient-custom {
+    /* fallback for old browsers 
+      background: #ebbca70d;*/
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right,
+      );
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right,
+      );
+  }
+  
+  .gradient-custom-4 {
+    /* fallback for old browsers 
+      background: #f193fb1f;*/
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to left,
+  
+      );
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to left,
+  
+      );
+  }
+  
+  
+
+
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2%;
+    padding-bottom: 60px;
+    padding-top: 10px;
+
+}
+
+.divisorias2{
+  padding: 20%;
+}
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 3px;
+      background-color: rgba(121, 140, 224, 0.25);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      margin-left: -3px;
+  }
+
+
+.agenda {
+    padding: 2px 30px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    height: 50%;
+    margin-top: 5%;
+    padding-top: 8%;
+
+}
+
+img {
+    width: 100%;
+}
+
+.img-agenda {
+    width: 100%;
+}
+
+.agenda::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 50%;
+    right: -11px;
+    background-color: #cfaf8f;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+
+.agenda.left::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -11px;
+    background-color: #cfaf8f;
+    top: 50%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.agenda.right::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -11px;
+    background-color: #bbb;
+    top: 50%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 10%;
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    box-shadow: #bbbbbb97;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
