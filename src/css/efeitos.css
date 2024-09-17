@@ -6,7 +6,7 @@ audio#audio-player {
 }
 
 
-/** Div Animada **/
+/** Div Animada
 #animated_div {
     float: left;
     display: block;
@@ -19,7 +19,29 @@ audio#audio-player {
     position: relative;
     font-weight: bold;
     font-size: 3px;
-    /*padding: 20px;*/
+    /*padding: 20px;
+    padding-right: 20px;
+    animation: animated_div 5s 1;
+    -moz-animation: animated_div 5s 1;
+    -webkit-animation: animated_div 5s 1;
+    -o-animation: animated_div 5s 1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}*/
+
+#animated_div {
+    float: left;
+    display: block;
+    /* padding-left: 15%; */
+    width: 90%;
+    /* height: 1%; */
+    /* background: linear-gradient(to right, rgba(207, 199, 248, 0.742), rgba(235, 188, 167, 0.624)); */
+    cursor: pointer;
+    color: #ffffff;
+    /* position: relative; */
+    font-weight: bold;
+    font-size: 3px;
+    /* padding: 20px; */
     padding-right: 20px;
     animation: animated_div 5s 1;
     -moz-animation: animated_div 5s 1;
