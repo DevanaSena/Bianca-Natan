@@ -6,16 +6,16 @@
 
     <title> Convite de Casamento | B&N</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="src/css/responsividade.css">
-      <link rel="stylesheet" href="src/css/music.css">
-      <link rel="stylesheet" href="src/css/efeitos.css">
-      <link rel="stylesheet" href="src/css/timeline.css">
-      <link rel="stylesheet" href="src/css/responsividade.css">
-    
+    <link rel="stylesheet" href="src/css/responsividade.css">
+    <link rel="stylesheet" href="src/css/music.css">
+    <link rel="stylesheet" href="src/css/efeitos.css">
+    <link rel="stylesheet" href="src/css/timeline.css">
+    <link rel="stylesheet" href="src/css/responsividade.css">
+
     <link rel="icon" href="src/img/icone.PNG" type="image/x-icon">
 
 
-       <style>
+    <style>
         * {
             box-sizing: border-box;
         }
@@ -31,6 +31,7 @@
             color: #56555b;
             /* Cor geral do texto */
         }
+
         body {
             height: 90%;
             width: 100%;
@@ -42,23 +43,28 @@
 
 
         }
+
         body .fundo {
             background-image: image();
             width: 100%;
             height: 100%;
         }
+
         .row::after {
             content: "";
             clear: both;
             display: table;
         }
+
         [class*="col-"] {
             float: left;
             padding: 15px;
         }
+
         .header {
             color: #ffffff;
         }
+
         /*controle musica*/
         #music-controls {
             margin-top: 20px;
@@ -67,6 +73,7 @@
         div.divisoria {
             height: 20%;
         }
+
         .nomes {
             width: 100%;
 
@@ -76,11 +83,13 @@
             border: 0;
             margin: 0;
         }
+
         .floral {
             width: 100%;
             border: 0;
             margin: 0;
         }
+
         .florCentro {
             width: 100%;
             padding-left: 30%;
@@ -89,17 +98,20 @@
             border: 0;
             margin: 0;
         }
+
         h1 {
             font: 'Amsterdam One', cursive;
             color: #be4e6b;
             /* Cor da fonte h1 */
         }
+
         h2,
         p {
             font: 'Belleza', sans-serif;
             color: #838c8a;
             /* Cor do texto */
         }
+
         section {
             display: flex;
             justify-content: center;
@@ -108,31 +120,37 @@
             text-align: center;
 
         }
+
         .full-screen {
             margin-top: 0rem;
             width: 100%;
             margin-bottom: 1.5rem;
 
         }
+
         #timer {
             display: flex;
             justify-content: space-around;
             width: 80%;
             max-width: 600rem;
         }
+
         #timer div {
             text-align: center;
         }
+
         #timer span {
             font-size: 0, 4rem;
             display: block;
         }
+
         .fraseConvidados {
             width: 100%;
 
             padding-left: 17%;
             padding-right: 17%;
         }
+
         .dataCasamento {
             width: 100%;
             padding-top: 0.5rem;
@@ -140,16 +158,19 @@
             padding-left: 8%;
             padding-right: 8%;
         }
+
         .col-12.menu {
             padding-left: 3%;
             padding-right: 1%;
         }
+
         .enderecoCasamento {
             padding-top: 0.5rem;
             padding-left: 17%;
             padding-right: 17%;
             padding-bottom: 1.0rem;
         }
+
         /*cELULAR*/
         .menus.col-12 {
             width: 100%;
@@ -162,6 +183,7 @@
             padding-bottom: 0;
 
         }
+
         .maps {
             width: 100%;
             height: auto;
@@ -179,6 +201,7 @@
             /* text-align: center;*/
             height: auto;
         }
+
         .asideformradio,
         textarea {
             padding: 10px;
@@ -192,6 +215,7 @@
             border-radius: 15px;
 
         }
+
         .wedding-Form form label,
         input {
             color: #be4e6b;
@@ -201,6 +225,7 @@
             border-radius: 15px;
 
         }
+
         form label input,
         radio {
             color: #be4e6b;
@@ -387,8 +412,9 @@
                 width: 100%;
                 align-content: space-between;
                 border: 5%;
-                padding-left: 22%;
-                padding-right: 22%;
+                padding-left: 12%;
+                padding-right: 12%;
+                grid-gap: 10%;
 
                 display: inline-flex;
                 padding-bottom: 18%;
@@ -421,23 +447,23 @@
     <img class="floral" src="src/img/floral3.png" alt="">
     <div class="home col-12">
 
-       <!--Controles de áudio -->
-    <div class="row">
+        <!--Controles de áudio -->
+        <div class="row">
 
-        <div id="animated_div" id="music-controls">
-            <!-- <i class="animated_div"><img class="som" src="src/img/cd_music_love_song.svg" width="30px"></i> <button id="play-button">Play</button>-->
-            <audio controls autoplay loop id="audio-player">
-                <!-- Adicione as músicas aqui -->
-                <source src="src/media/2.mp3" type="audio/mp3">
-                <source src="src/media/3.mp3" type="audio/mp3">
-                <source src="src/media/1.mp3" type="audio/mp3">
-                Seu navegador não suporta o elemento de áudio.
-            </audio>
+            <div id="animated_div" id="music-controls">
+                <!-- <i class="animated_div"><img class="som" src="src/img/cd_music_love_song.svg" width="30px"></i> <button id="play-button">Play</button>-->
+                <audio controls autoplay loop id="audio-player">
+                    <!-- Adicione as músicas aqui -->
+                    <source src="src/media/2.mp3" type="audio/mp3">
+                    <source src="src/media/3.mp3" type="audio/mp3">
+                    <source src="src/media/1.mp3" type="audio/mp3">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
 
+            </div>
+
+            <!-- SOM -->
         </div>
-
-        <!-- SOM -->
-    </div>
 
 
         <img class="nomes" src="src/img/nomesTrasparente.PNG" width="80%" alt="">
@@ -572,7 +598,7 @@
 
         </script>
 
-     
+
 </body>
 
 </html>
