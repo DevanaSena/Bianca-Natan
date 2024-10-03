@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="src/img/icone.PNG" type="image/x-icon">
+
+    <title> Confirmação e mensagens de Casamento | B&N</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/sobre.css">
+
+    <link rel="stylesheet" href="src/css/responsividade.css">
+    <link rel="stylesheet" href="src/css/music.css">
+    <link rel="stylesheet" href="src/css/form.css">
+    <link rel="stylesheet" href="src/css/fontes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="src/css/divisoria.css">
+    <link rel="stylesheet" href="src/css/timeline.css">
+    <link rel="stylesheet" href="src/css/responsividade.css">
+    <link rel="stylesheet" href="src/css/efeitos.css">
+
+    <!-- fontes-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Allura&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Indie+Flower&family=Lobster&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&family=Satisfy&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="src/img/icone.PNG" alt="Logo Casamento" class="logo" style="width: 80px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#lista-presentes">Lista de Presentes</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#confirmar-presenca">Confirmar Presença</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html#local">Local</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="row col-12">
+        <div id="animated_div" id="music-controls">
+            <!-- <i class="animated_div"><img class="som" src="src/img/cd_music_love_song.svg" width="30px"></i> <button id="play-button">Play</button>-->
+            <audio controls autoplay loop id="audio-player">
+                <!-- Adicione as músicas aqui -->
+                <source src="src/media/2.mp3" type="audio/mp3">
+                <source src="src/media/3.mp3" type="audio/mp3">
+                <source src="src/media/1.mp3" type="audio/mp3">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+    </div>
+
+
+    <!-- Convite-->
+    <!--<img class="flor5MeioEsq col" src="src/img/flor5MeioEsq.png" width="100%" alt="">-->
+
+    <section id="convi" class="col-12">
+
+
+        <div class="col-12 convite">
+
+
+            <div><!--Nome Noivos-->
+                <img class="nomes" src="src/img/nomesTrasparente.PNG" width="80%" alt="nomes noivos">
+            </div>
+
+
+            <img class="floralname1" src="src/img/flor5Meio.png" width="100%" alt="">
+
+
+            <!-- TEMPO-->
+
+            <div id="home">
+                <section id="countdown" class="full-screen" width="100%">
+                    <h3>Contagem Regressiva para o Casamento</h3> <br>
+                    <div class="row col-12 tempo " id="timer" width="100%">
+                        <div class="row col-12">
+                            <div class="col-2">
+                                <span class="col-2 " id="days"></span>
+                                Dias
+                            </div>
+                            <div class="col-2">
+                                <span class="col-2 " id="hours"></span>
+                                Horas
+                            </div>
+                            <div class="col-2">
+                                <span class="col-2 " id="minutes"></span>
+                                Minutos
+                            </div>
+                            <div class="col-2">
+                                <span class="col-2 " id="seconds"></span>
+                                Segundos
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Sobre 
+    <section id="sobre" class="col-12">
+        <div class="container">
+
+            <div id="about">
+                <div class="row col-12" id="nossaHistoria">
+                    <div class="col-12 col-12">
+                        <h1>Nossa História</h1>
+                        <p class="nossaHistoria">
+
+                            Em uma tarde comum, nossos caminhos se cruzaram de forma inesperada. O que começou como uma
+                            simples
+                            conversa
+                            logo se transformou em algo muito maior do que poderíamos imaginar. Em poucos meses,
+                            descobrimos que
+                            o
+                            que
+                            sentíamos um pelo outro era algo raro e especial. <br><br>
+
+                            Cada momento juntos foi como se o tempo parasse, enquanto curava as nossas feridas mais
+                            profundas.
+                            Foi
+                            nesse
+                            curto espaço de tempo que percebemos que tínhamos encontrado algo único – uma conexão
+                            verdadeira,
+                            repleta de
+                            amor, compreensão e sonhos compartilhados. <br><br>
+
+                            Hoje, estamos prontos para dar o próximo passo em nossa jornada juntos. E mal podemos
+                            esperar para
+                            celebrar
+                            esse amor com todos aqueles que fazem parte das nossas vidas. <br><br>
+
+                            Obrigado por fazerem parte da nossa história. Estamos ansiosos para escrever os próximos
+                            capítulos
+                            ao
+                            lado
+                            de vocês. <br><br>
+
+                            Com amor, <br><br>
+
+                            <img class="zoom-img" src="src/img/icone.PNG" alt="Flor Esquerda">
+                        </p>
+                    </div>
+                </div>
+
+               <!- ----- retirando o save date
+                <div class="video col-12" width="100%">
+                    <div class="row col-12">
+                        <div class="col-12 col-12">
+                            <h1>Save The Date</h1>
+                        </div>
+                    </div>
+        
+                    <video width="100%" height="auto" controls loop>
+                        <--<video width="100%" height="auto" autoplay controls loop>  AUTOPLAY  -> 
+        
+                        <source src="src/media/Cópia de som vogais.mp4" type="video/mp4">
+                        Seu BroYour browser does not support the video tag.
+                    </video>
+                </div>
+                <br><br>
+           --- ->
+            </div>
+
+        </div>
+    </section>-->
+
+
+    <!-- Confirmados -->
+    <section id="confirmados" class="col-12">
+        <div class="row">
+            <!-- ver dados cadastrados-->
+            <p class="col-12" id="form-status"></p>
+            <div class="col-12 l-m">
+                <div class="row col-12">
+                    <button class="button col" id="load-data" progress> Carregar Dados </button>
+                </div>
+                <br>
+                <table class="col-12" id="data-table">
+                    <thead>
+                        <tr>
+                            <!-- Cabeçalhos da tabela serão inseridos aqui -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas de dados serão inseridas aqui -->
+                    </tbody>
+                </table>
+            </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer col-12">
+            <div class="col-12">
+                <a href="https://bianca-natan.netlify.app/"><img class="floralname1" src="src/img/flor5Meio.png" width="100%" alt=""></a>
+
+                <!--<a href="index.html"><img class="florCentro" src="src/img/flor5Meio.png" width="100%" alt=""></a>-->
+                <br><br>
+            </div>
+            <img class="zoom-img" src="src/img/icone.PNG" alt="Flor Esquerda">
+
+
+            <div class="col-12">
+
+                <p>
+                    <span>
+                        <a href="https://api.whatsapp.com/send?phone=5511930561783"><b>WhatsApp da Noiva</b></a>
+                        &nbsp; &nbsp;e&nbsp;&nbsp;
+                        <a href="https://api.whatsapp.com/send?phone=5511989104635">
+                            <b>WhatsApp do Noivo</b></a>
+                    </span>
+                    <br><br>
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS and Custom Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+
+    <script src="src/js/time.js"></script>
+    <script src="src/js/musica.js"></script>
+    <script src="src/js/formPos.js"></script>
+    <script src="src/js/formGet.js"></script>
+</body>
+
+</html>
