@@ -41,6 +41,207 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <style>
+        .row playmusic .col-12 {
+            padding: 0;
+            margin: 0;
+        }
+
+        /**  **/
+
+        audio#audio-player {
+            height: 2rem;
+            width: 40%;
+        }
+
+
+        /** Div Animada **/
+        #animated_div {
+            float: left;
+            display: block;
+            padding-left: 15%;
+            width: 100%;
+            height: 1%;
+            background: linear-gradient(to right, rgba(207, 199, 248, 0.742), rgba(235, 188, 167, 0.624));
+            cursor: pointer;
+            color: #ffffff;
+            position: relative;
+            font-weight: bold;
+            font-size: 3px;
+            /*padding: 20px;*/
+            padding-right: 20px;
+            animation: animated_div 5s 1;
+            -moz-animation: animated_div 5s 1;
+            -webkit-animation: animated_div 5s 1;
+            -o-animation: animated_div 5s 1;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+
+        @keyframes animated_div {
+            /* 0% {
+        transform: rotate(0deg);
+        left: 0px;
+    }
+
+    25% {
+        transform: rotate(20deg);
+        left: 0px;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+
+    55% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+
+    70% {
+        transform: rotate(0deg);
+        left: 500px;
+        background: #bed8dc;
+    }
+
+    50% {
+        transform: rotate(-360deg);
+        left: 0px;
+    }
+}
+
+@-webkit-keyframes animated_div {
+    0% {
+        -webkit-transform: rotate(0deg);
+        left: 0px;
+    }
+
+    25% {
+        -webkit-transform: rotate(20deg);
+        left: 0px;
+    }
+
+    50% {
+        -webkit-transform: rotate(0deg);
+        left: 500px;
+    }
+
+    55% {
+        -webkit-transform: rotate(0deg);
+        left: 500px;
+    }
+
+    70% {
+        -webkit-transform: rotate(0deg);
+        left: 500px;
+        background: #1ec7e6;
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        left: 0px;
+    }
+}
+
+@-moz-keyframes animated_div {
+    0% {
+        -moz-transform: rotate(0deg);
+        left: 0px;
+    }
+
+    25% {
+        -moz-transform: rotate(20deg);
+        left: 0px;
+    }
+
+    50% {
+        -moz-transform: rotate(0deg);
+        left: 500px;
+    }
+
+    55% {
+        -moz-transform: rotate(0deg);
+        left: 500px;
+    }
+
+    70% {
+        -moz-transform: rotate(0deg);
+        left: 500px;
+        background: #1ec7e6;
+    }
+
+    100% {
+        -moz-transform: rotate(-360deg);
+        left: 0px;
+    }
+}
+
+@-o-keyframes animated_div {
+    0% {
+        transform: rotate(0deg);
+        left: 0px;
+    }
+
+    25% {
+        transform: rotate(20deg);
+        left: 0px;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+
+    55% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+
+    70% {
+        transform: rotate(0deg);
+        left: 500px;
+        background: #1ec7e6;
+    }
+
+    100% {
+        transform: rotate(-360deg);
+        left: 0px;
+    }
+}
+    */
+
+
+            /*animação flor*/
+            /*
+.row,
+.col-12,
+.col-4 {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.zoom-img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.left:hover .zoom-img {
+    transform: scale(1.1) translate(-5%, 0);
+}
+
+.meio:hover .zoom-img {
+    transform: scale(1.1);
+}
+
+.right:hover .zoom-img {
+    transform: scale(1.1) translate(-5%, 0);
+}
+*/
+    </style>
 
 </head>
 
@@ -68,7 +269,9 @@
     </nav>
 
 
-    <div class="row col-12">
+
+
+    <div class="row playmusic col-12">
         <div id="animated_div" id="music-controls">
             <!-- <i class="animated_div"><img class="som" src="src/img/cd_music_love_song.svg" width="30px"></i> <button id="play-button">Play</button>-->
             <audio controls autoplay loop id="audio-player">
@@ -131,75 +334,6 @@
     </section>
 
 
-    <!-- Sobre 
-    <section id="sobre" class="col-12">
-        <div class="container">
-
-            <div id="about">
-                <div class="row col-12" id="nossaHistoria">
-                    <div class="col-12 col-12">
-                        <h1>Nossa História</h1>
-                        <p class="nossaHistoria">
-
-                            Em uma tarde comum, nossos caminhos se cruzaram de forma inesperada. O que começou como uma
-                            simples
-                            conversa
-                            logo se transformou em algo muito maior do que poderíamos imaginar. Em poucos meses,
-                            descobrimos que
-                            o
-                            que
-                            sentíamos um pelo outro era algo raro e especial. <br><br>
-
-                            Cada momento juntos foi como se o tempo parasse, enquanto curava as nossas feridas mais
-                            profundas.
-                            Foi
-                            nesse
-                            curto espaço de tempo que percebemos que tínhamos encontrado algo único – uma conexão
-                            verdadeira,
-                            repleta de
-                            amor, compreensão e sonhos compartilhados. <br><br>
-
-                            Hoje, estamos prontos para dar o próximo passo em nossa jornada juntos. E mal podemos
-                            esperar para
-                            celebrar
-                            esse amor com todos aqueles que fazem parte das nossas vidas. <br><br>
-
-                            Obrigado por fazerem parte da nossa história. Estamos ansiosos para escrever os próximos
-                            capítulos
-                            ao
-                            lado
-                            de vocês. <br><br>
-
-                            Com amor, <br><br>
-
-                            <img class="zoom-img" src="src/img/icone.PNG" alt="Flor Esquerda">
-                        </p>
-                    </div>
-                </div>
-
-               <!- ----- retirando o save date
-                <div class="video col-12" width="100%">
-                    <div class="row col-12">
-                        <div class="col-12 col-12">
-                            <h1>Save The Date</h1>
-                        </div>
-                    </div>
-        
-                    <video width="100%" height="auto" controls loop>
-                        <--<video width="100%" height="auto" autoplay controls loop>  AUTOPLAY  -> 
-        
-                        <source src="src/media/Cópia de som vogais.mp4" type="video/mp4">
-                        Seu BroYour browser does not support the video tag.
-                    </video>
-                </div>
-                <br><br>
-           --- ->
-            </div>
-
-        </div>
-    </section>-->
-
-
     <!-- Confirmados -->
     <section id="confirmados" class="col-12">
         <div class="row">
@@ -229,7 +363,8 @@
     <footer>
         <div class="footer col-12">
             <div class="col-12">
-                <a href="https://bianca-natan.netlify.app/"><img class="floralname1" src="src/img/flor5Meio.png" width="100%" alt=""></a>
+                <a href="https://bianca-natan.netlify.app/"><img class="floralname1" src="src/img/flor5Meio.png"
+                        width="100%" alt=""></a>
 
                 <!--<a href="index.html"><img class="florCentro" src="src/img/flor5Meio.png" width="100%" alt=""></a>-->
                 <br><br>
