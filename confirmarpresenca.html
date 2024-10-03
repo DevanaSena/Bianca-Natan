@@ -4,8 +4,213 @@
 <head>
     <title>Confirmar Presença | B&N</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   
+   
     <style>
+        .row playmusic .col-12 {
+            padding: 0;
+            margin: 0;
+        }
 
+        /**  **/
+
+        audio#audio-player {
+            height: 2rem;
+            width: 40%;
+        }
+
+
+        /** Div Animada **/
+        #animated_div {
+            float: left;
+            display: block;
+            padding-left: 15%;
+            width: 100%;
+            height: 1%;
+            background: linear-gradient(to right, rgba(207, 199, 248, 0.742), rgba(235, 188, 167, 0.624));
+            cursor: pointer;
+            color: #ffffff;
+            position: relative;
+            font-weight: bold;
+            font-size: 3px;
+            /*padding: 20px;*/
+            padding-right: 20px;
+            animation: animated_div 5s 1;
+            -moz-animation: animated_div 5s 1;
+            -webkit-animation: animated_div 5s 1;
+            -o-animation: animated_div 5s 1;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+
+        @keyframes animated_div {
+            /* 0% {
+        transform: rotate(0deg);
+        left: 0px;
+    }
+
+    25% {
+        transform: rotate(20deg);
+        left: 0px;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+
+    55% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+
+    70% {
+        transform: rotate(0deg);
+        left: 500px;
+        background: #bed8dc;
+    }
+
+    50% {
+        transform: rotate(-360deg);
+        left: 0px;
+    }
+}
+
+@-webkit-keyframes animated_div {
+    0% {
+        -webkit-transform: rotate(0deg);
+        left: 0px;
+    }
+
+    25% {
+        -webkit-transform: rotate(20deg);
+        left: 0px;
+    }
+
+    50% {
+        -webkit-transform: rotate(0deg);
+        left: 500px;
+    }
+
+    55% {
+        -webkit-transform: rotate(0deg);
+        left: 500px;
+    }
+
+    70% {
+        -webkit-transform: rotate(0deg);
+        left: 500px;
+        background: #1ec7e6;
+    }
+
+    100% {
+        -webkit-transform: rotate(-360deg);
+        left: 0px;
+    }
+}
+
+@-moz-keyframes animated_div {
+    0% {
+        -moz-transform: rotate(0deg);
+        left: 0px;
+    }
+
+    25% {
+        -moz-transform: rotate(20deg);
+        left: 0px;
+    }
+
+    50% {
+        -moz-transform: rotate(0deg);
+        left: 500px;
+    }
+
+    55% {
+        -moz-transform: rotate(0deg);
+        left: 500px;
+    }
+
+    70% {
+        -moz-transform: rotate(0deg);
+        left: 500px;
+        background: #1ec7e6;
+    }
+
+    100% {
+        -moz-transform: rotate(-360deg);
+        left: 0px;
+    }
+}
+
+@-o-keyframes animated_div {
+    0% {
+        transform: rotate(0deg);
+        left: 0px;
+    }
+
+    25% {
+        transform: rotate(20deg);
+        left: 0px;
+    }
+
+    50% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+
+    55% {
+        transform: rotate(0deg);
+        left: 500px;
+    }
+
+    70% {
+        transform: rotate(0deg);
+        left: 500px;
+        background: #1ec7e6;
+    }
+
+    100% {
+        transform: rotate(-360deg);
+        left: 0px;
+    }
+}
+    */
+
+
+            /*animação flor*/
+            /*
+.row,
+.col-12,
+.col-4 {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.zoom-img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.left:hover .zoom-img {
+    transform: scale(1.1) translate(-5%, 0);
+}
+
+.meio:hover .zoom-img {
+    transform: scale(1.1);
+}
+
+.right:hover .zoom-img {
+    transform: scale(1.1) translate(-5%, 0);
+}
+*/
+    </style>
+
+   
+   <style>
 
         .navbar.row.col-12 {
           padding: 0;
