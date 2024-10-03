@@ -443,205 +443,206 @@
 
     <div class="col-12 col-s-12">
 
-                <!--Confirmar Presença-->
-                <div>
+        <!--Confirmar Presença-->
+        <div>
 
-               <!-- <img class="flor5MeioDir" src="src/img/flor5MeioDir.png" alt="">
+            <!-- <img class="flor5MeioDir" src="src/img/flor5MeioDir.png" alt="">
         
                     <img class="dataCasamento" src="src/img/confirmarPresenca.PNG" width="100%" alt="" id="contact">-->
-        
+
+            <div class="col-12 col-s-12">
+
+                <form class="col-12" id="wedding-form"
+                    action="https://script.google.com/macros/s/AKfycbxSgOGkWd4KnGSuqyko4VvREvqGlJZWNdH9AhohmvSoIAbdoN5szTGdBum7L4sMjvwf/exec"
+                    method="POST" onsubmit="return handleFormSubmit(event)">
                     <div class="col-12 col-s-12">
-        
-                        <form class="col-12" id="wedding-form"
-                            action="https://script.google.com/macros/s/AKfycbxsrp1IdwwDGjRYHjcgPyI-ksr7DY2qhvK6bKfs7KT5MAF0xLbcB0Xb9Cg7LpJ6M0GA/exec"
-                            method="POST" onsubmit="return handleFormSubmit(event)">
-                            <div class="col-12 col-s-12">
-                                <label class="asideform col-12" for="nome">
-                                    <h5>Qual é o seu nome?*</h5>
-                                    <input class="asideform col-12" type="text" id="nome" name="nome" required>
-                                </label>
-        
-                                <label class="asideform col-12">
-                                    <h5>Você é convidado do Noivo ou da Noiva?*</h5>
-                                    <div class="asideformradio col-12">
-                                        <input class="" type="radio" id="noivo" name="side" value="Noivo" required>
-                                        <label class="asideform" for="noivo">Noivo</label>
-                                        <input class="" type="radio" id="noiva" name="side" value="Noiva">
-                                        <label class="asideform" for="noiva">Noiva</label>
-                                    </div>
-                                </label>
-        
-                                <label class="asideform col-12">
-                                    <h5>Poderá comparecer?*</h5>
-                                    <div class="asideformradio col-12">
-                                        <label class="asideform col-12" for="sim">
-                                            <input class="asideform " type="radio" id="sim" name="attendance" value="Sim, irei"
-                                                required> Sim, irei
-                                        </label><br>
-                                        <label class="asideform col-12" for="nao">
-                                            <input class="asideform " type="radio" id="nao" name="attendance" value="Não">
-                                            Não
-                                        </label><br>
-                                        <label class="asideform col-12" for="confirmoDepois">
-                                            <input class="asideform " type="radio" id="confirmoDepois" name="attendance"
-                                                value="Confirmo depois"> Confirmo depois
-                                        </label>
-                                    </div>
-                                </label>
-        
-                                <div class="asideform col-12">
-                                    <label class="asideform col-12" for="message">
-                                        <h5>Envie uma mensagem aos Noivos</h5>
-                                    </label>
-                                    <textarea class="asideform col-12" id="message" name="message" rows="4"
-                                        cols="50"></textarea>
-                                </div>
-        
-                                <button class="button col-12" type="submit">Enviar</button>
-        
+                        <label class="asideform col-12" for="nome">
+                            <h5>Qual é o seu nome?*</h5>
+                            <input class="asideform col-12" type="text" id="nome" name="nome" required>
+                        </label>
+
+                        <label class="asideform col-12">
+                            <h5>Você é convidado do Noivo ou da Noiva?*</h5>
+                            <div class="asideformradio col-12">
+                                <input class="" type="radio" id="noivo" name="side" value="Noivo" required>
+                                <label class="asideform" for="noivo">Noivo</label>
+                                <input class="" type="radio" id="noiva" name="side" value="Noiva">
+                                <label class="asideform" for="noiva">Noiva</label>
                             </div>
-                        </form>
-        
-                        <!-- ver dados cadastrados-->
-                        <p class="col-12" id="form-status"></p>
-                        <div class="col-12">
-                            <!-- <div class="row">
+                        </label>
+
+                        <label class="asideform col-12">
+                            <h5>Poderá comparecer?*</h5>
+                            <div class="asideformradio col-12">
+                                <label class="asideform col-12" for="sim">
+                                    <input class="asideform " type="radio" id="sim" name="attendance" value="Sim, irei"
+                                        required> Sim, irei
+                                </label><br>
+                                <label class="asideform col-12" for="nao">
+                                    <input class="asideform " type="radio" id="nao" name="attendance" value="Não">
+                                    Não
+                                </label><br>
+                                <label class="asideform col-12" for="confirmoDepois">
+                                    <input class="asideform " type="radio" id="confirmoDepois" name="attendance"
+                                        value="Confirmo depois"> Confirmo depois
+                                </label>
+                            </div>
+                        </label>
+
+                        <div class="asideform col-12">
+                            <label class="asideform col-12" for="message">
+                                <h5>Envie uma mensagem aos Noivos</h5>
+                            </label>
+                            <textarea class="asideform col-12" id="message" name="message" rows="4"
+                                cols="50"></textarea>
+                        </div>
+
+                        <button class="button col-12" type="submit">Enviar</button>
+
+                    </div>
+                </form>
+
+                <!-- ver dados cadastrados-->
+                <p class="col-12" id="form-status"></p>
+                <div class="col-12">
+                    <!-- <div class="row">
                     
                                     <button class="button col-6" id="load-data" progress>Carregar Dados</button>
                     
                                 </div>-->
-                            <table class="col-12" id="data-table">
-                                <thead>
-                                    <tr>
-                                        <!-- Cabeçalhos da tabela serão inseridos aqui -->
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- Linhas de dados serão inseridas aqui -->
-                                </tbody>
-                            </table>
-                        </div>
-        
-        
-                    </div>    
+                    <table class="col-12" id="data-table">
+                        <thead>
+                            <tr>
+                                <!-- Cabeçalhos da tabela serão inseridos aqui -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Linhas de dados serão inseridas aqui -->
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
 
 
 
 
-    </div>
-    <div class="row divisoria"></div>
-    <br><br>
-    <div class="row divisoria"></div>
-    <div class="row divisoria"></div>
-    <!-- TEMPO-->
-    <section id="countdown" class="full-screen" width="100%">
-        <h3>Contagem Regressiva para o Casamento</h3> <br>
-        <div class="col tempo " id="timer" width="100%">
-            <div class="col ">
-                <span class="col " id="days"></span>
-                Dias
-            </div>
-            <div>
-                <span class="col " id="hours"></span>
-                Horas
-            </div>
-            <div>
-                <span class="col " id="minutes"></span>
-                Minutos
-            </div>
-            <div>
-                <span class="col " id="seconds"></span>
-                Segundos
-            </div>
         </div>
-    </section>
+        <div class="row divisoria"></div>
+        <br><br>
+        <div class="row divisoria"></div>
+        <div class="row divisoria"></div>
+        <!-- TEMPO-->
+        <section id="countdown" class="full-screen" width="100%">
+            <h3>Contagem Regressiva para o Casamento</h3> <br>
+            <div class="col tempo " id="timer" width="100%">
+                <div class="col ">
+                    <span class="col " id="days"></span>
+                    Dias
+                </div>
+                <div>
+                    <span class="col " id="hours"></span>
+                    Horas
+                </div>
+                <div>
+                    <span class="col " id="minutes"></span>
+                    Minutos
+                </div>
+                <div>
+                    <span class="col " id="seconds"></span>
+                    Segundos
+                </div>
+            </div>
+        </section>
 
-    <!-- divisoria --------------------------------------------------------------------
+        <!-- divisoria --------------------------------------------------------------------
                 fraseConvidados, dataCasamento,enderecoCasamento
                 -->
-    <div class="row divisoria"></div>
-    <br><br>
-    <div class="row divisoria"></div>
-
-    <!--- menu -->
-    <div class="row">
-        <div class="menus col-12 ">
-            <div class="menu col "><!--class="iconelista" --></div>
-
-            <div class="menu col "><!--class="iconelista" -->
-                <a href="listaPresentes.html"> <img src="iconessLista.png" width="54%" alt=""></a>
-            </div>
-            <div class="menu col "><!--class="iconelista" --></div>
-
-            <div class="menu col "><!--lass="iconessLocalizacao" -->
-                <a href="localizacao.html"> <img c src="iconessLocalizacao.png" width="55%" alt=""></a>
-            </div>
-        </div>
-    </div>
-    <div class="row divisoria"></div>
-
-
-    <div class="row divisoria"></div>
-
-
-
-    <div class="footer col-12">
-        <div class="col-12 img">
-            <a href="index.html"><img class="nomes" src="src/img/nomesTrasparente.PNG" height="100%" alt=""></a>
-            <br><br>
-        </div>
-        <p>
-            <span>
-                <a href="https://api.whatsapp.com/send?phone=5511930561783"><b>WhatsApp da Noiva</b></a>
-                &nbsp; &nbsp;e&nbsp;&nbsp;
-                <a href="https://api.whatsapp.com/send?phone=5511989104635">
-                    <b>WhatsApp do Noivo</b></a>
-            </span>
-            <br><br>
-
-        </p>
+        <div class="row divisoria"></div>
         <br><br>
+        <div class="row divisoria"></div>
 
-    </div>
+        <!--- menu -->
+        <div class="row">
+            <div class="menus col-12 ">
+                <div class="menu col "><!--class="iconelista" --></div>
+
+                <div class="menu col "><!--class="iconelista" -->
+                    <a href="listaPresentes.html"> <img src="iconessLista.png" width="54%" alt=""></a>
+                </div>
+                <div class="menu col "><!--class="iconelista" --></div>
+
+                <div class="menu col "><!--lass="iconessLocalizacao" -->
+                    <a href="localizacao.html"> <img c src="iconessLocalizacao.png" width="55%" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="row divisoria"></div>
 
 
-    <script>/** Time ***/
+        <div class="row divisoria"></div>
 
-        const countdownDate = new Date("Nov 3, 2024 00:00:00").getTime();
-        const timerElements = {
-            days: document.getElementById("days"),
-            hours: document.getElementById("hours"),
-            minutes: document.getElementById("minutes"),
-            seconds: document.getElementById("seconds")
-        };
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
 
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.getElementById("countdown").innerHTML = "O casamento já aconteceu!";
-                return;
+        <div class="footer col-12">
+            <div class="col-12 img">
+                <a href="index.html"><img class="nomes" src="src/img/nomesTrasparente.PNG" height="100%" alt=""></a>
+                <br><br>
+            </div>
+            <p>
+                <span>
+                    <a href="https://api.whatsapp.com/send?phone=5511930561783"><b>WhatsApp da Noiva</b></a>
+                    &nbsp; &nbsp;e&nbsp;&nbsp;
+                    <a href="https://api.whatsapp.com/send?phone=5511989104635">
+                        <b>WhatsApp do Noivo</b></a>
+                </span>
+                <br><br>
+
+            </p>
+            <br><br>
+
+        </div>
+
+
+        <script>/** Time ***/
+
+            const countdownDate = new Date("Nov 3, 2024 00:00:00").getTime();
+            const timerElements = {
+                days: document.getElementById("days"),
+                hours: document.getElementById("hours"),
+                minutes: document.getElementById("minutes"),
+                seconds: document.getElementById("seconds")
+            };
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                if (distance < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById("countdown").innerHTML = "O casamento já aconteceu!";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                timerElements.days.textContent = days;
+                timerElements.hours.textContent = hours;
+                timerElements.minutes.textContent = minutes;
+                timerElements.seconds.textContent = seconds;
             }
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const countdownInterval = setInterval(updateCountdown, 1000);
 
-            timerElements.days.textContent = days;
-            timerElements.hours.textContent = hours;
-            timerElements.minutes.textContent = minutes;
-            timerElements.seconds.textContent = seconds;
-        }
+        </script>
 
-        const countdownInterval = setInterval(updateCountdown, 1000);
-
-    </script>
-
-    <script src="src/js/formPos.js"></script>
-    <script src="src/js/formGet.js"></script>
+        <script src="src/js/formPos.js"></script>
+        <script src="src/js/formGet.js"></script>
+        <script src="src/js/musica.js"></script>
 
 
 </body>
