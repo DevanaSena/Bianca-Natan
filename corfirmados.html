@@ -309,10 +309,13 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="https://bianca-natan.netlify.app">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://bianca-natan.netlify.app/listapresentes">Lista de Presentes</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://bianca-natan.netlify.app/confirmarpresenca">Confirmar Presença</a>
+                <li class="nav-item"><a class="nav-link" href="https://bianca-natan.netlify.app/listapresentes">Lista de
+                        Presentes</a></li>
+                <li class="nav-item"><a class="nav-link"
+                        href="https://bianca-natan.netlify.app/confirmarpresenca">Confirmar Presença</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="https://bianca-natan.netlify.app/localizacao">Local</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://bianca-natan.netlify.app/localizacao">Local</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -352,27 +355,27 @@
 
 
             <!-- TEMPO-->
-        <section id="countdown" class="full-screen" width="100%">
-            <h3>Contagem Regressiva para o Casamento</h3> <br>
-            <div class="col tempo " id="timer" width="100%">
-                <div class="col ">
-                    <span class="col " id="days"></span>
-                    Dias
+            <section id="countdown" class="full-screen" width="100%">
+                <h3>Contagem Regressiva para o Casamento</h3> <br>
+                <div class="col tempo " id="timer" width="100%">
+                    <div class="col ">
+                        <span class="col " id="days"></span>
+                        Dias
+                    </div>
+                    <div>
+                        <span class="col " id="hours"></span>
+                        Horas
+                    </div>
+                    <div>
+                        <span class="col " id="minutes"></span>
+                        Minutos
+                    </div>
+                    <div>
+                        <span class="col " id="seconds"></span>
+                        Segundos
+                    </div>
                 </div>
-                <div>
-                    <span class="col " id="hours"></span>
-                    Horas
-                </div>
-                <div>
-                    <span class="col " id="minutes"></span>
-                    Minutos
-                </div>
-                <div>
-                    <span class="col " id="seconds"></span>
-                    Segundos
-                </div>
-            </div>
-        </section>
+            </section>
         </div>
     </section>
 
@@ -430,6 +433,41 @@
         </div>
 
     </footer>
+
+    <script>/** Time ***/
+
+        const countdownDate = new Date("Nov 3, 2024 00:00:00").getTime();
+        const timerElements = {
+            days: document.getElementById("days"),
+            hours: document.getElementById("hours"),
+            minutes: document.getElementById("minutes"),
+            seconds: document.getElementById("seconds")
+        };
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "O casamento já aconteceu!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            timerElements.days.textContent = days;
+            timerElements.hours.textContent = hours;
+            timerElements.minutes.textContent = minutes;
+            timerElements.seconds.textContent = seconds;
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+    </script>
 
 
 
