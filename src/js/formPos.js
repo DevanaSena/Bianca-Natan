@@ -12,8 +12,10 @@ function handleFormSubmit(event) {
     .then(response => response.text())
     .then(text => {
         document.getElementById("form-status").textContent = text === "Success" ? "Formulário enviado com sucesso!" : "Ocorreu um erro ao enviar o formulário.";
+        alert("Dados enviados com sucesso!!")
     })
     .catch(error => {
         document.getElementById("form-status").textContent = "Ocorreu um erro: " + error.message;
     });
+
 }
